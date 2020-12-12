@@ -1,0 +1,97 @@
+\documentclass[11pt]{scrartcl}
+\usepackage{selinput}
+\usepackage{calculator}
+\usepackage[margin=2cm]{geometry}
+\usepackage{enumitem,varwidth}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{lmodern}
+\usepackage{environ}
+\newcommand{\swotWidth}{20}
+\newcommand{\swotHeight}{10}
+\DIVIDE{\swotWidth}{2}{\tileWidth}
+\DIVIDE{\swotHeight}{2}{\tileHeight}
+\DIVIDE{\tileWidth}{2}{\xTile}
+\DIVIDE{\tileHeight}{2}{\yTile}
+
+\parindent0em
+
+\begin{document}
+
+\begin{tikzpicture}[
+    square/.style={%
+        shape=rectangle, minimum width=\tileWidth cm, minimum height=\tileHeight cm,
+        inner sep=-1mm, draw
+    }, font=\scriptsize\sffamily, thick
+]
+% \draw[help lines] (-16,-16) grid (16,16);
+\draw[black, fill=gray] (-\tileWidth,-\tileHeight) rectangle (\tileWidth,\tileHeight);
+
+
+
+
+
+
+
+
+Strengths
+\node [square, fill=DarkSeaGreen!75!yellow, text width=\tileWidth cm] at (-\xTile,\yTile) {
+    \begin{varwidth}{\linewidth}
+        \begin{itemize}[leftmargin=*,noitemsep]
+            \item Technical and business
+            \item Stable management team
+            \item Economies of scale
+            \item Financial stability
+            \item Acquisition capabilities
+
+        \end{itemize}
+    \end{varwidth}
+};
+
+% Weaknesses
+\node [square, fill=red!25, text width=\tileWidth cm] at (\xTile, \yTile) {
+    \begin{varwidth}{\linewidth}
+        \begin{itemize}[leftmargin=*,noitemsep]
+            \item Marketing capabilities
+            \item Accounts cross-selling
+            \item Win on price image
+            \item BPO market
+            \item No differentiation
+        \end{itemize}
+    \end{varwidth}
+};
+
+% % Opportunities
+\node [square, fill=DarkSeaGreen!75, text width=\tileWidth cm] at (-\xTile,-\yTile) {
+    \begin{varwidth}{\linewidth}
+        \begin{itemize}[leftmargin=*,noitemsep]
+            \item Marketing push
+            \item Adding BPO capabilities
+            \item Pricing structure
+            \item Business process approach
+            \item Annuity engagement
+        \end{itemize}
+    \end{varwidth}
+};
+
+% Threats
+\node [square, fill=Salmon!75, text width=\tileWidth cm] at (\xTile,-\yTile) {
+    \begin{varwidth}{\linewidth}
+        \begin{itemize}[leftmargin=*,noitemsep]
+            \item High-risk deals
+            \item Image change inability
+            \item Degree of automation
+            \item Profitability losses
+        \end{itemize}
+    \end{varwidth}
+};
+
+\draw(-0.3,0.3) node {\large\textbf{S}};
+\draw(0.3,0.3) node {\large\textbf{W}};
+\draw(-0.3,-0.3) node {\large\textbf{O}};
+\draw(0.3,-0.3) node {\large\textbf{T}};
+
+\end{tikzpicture}
+
+\end{document}
