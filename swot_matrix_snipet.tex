@@ -22,7 +22,7 @@
 \graphicspath{ {./img/} }
 
 
-\newcommand{\swotWidth}{\textwidth}
+\newcommand{\swotWidth}{18}
 \newcommand{\swotHeight}{8}
 \DIVIDE{\swotWidth}{2}{\tileWidth}
 \DIVIDE{\swotHeight}{2}{\tileHeight}
@@ -43,7 +43,7 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Company sheet Title
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{minipage}{\textwidth cm}
+\begin{minipage}{\textwidth}
     % %%%%%%%%%%%%%%%%%%%%%%%%%%
     % Title
     % %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,10 +51,13 @@
     {\textbf{Mensch und Maschine}}
 \end{minipage}
 
+\the\textwidth\\
+\printinunitsof{}\prntlen{\textwidth}\\
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Company Story and Information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{minipage}[t]{0,75\textwidth}
+
     The german company \enquote{Mensch und Maschine} resells CAD/E/M
     products by the american company \enquote{AutoDesk} and develops
     own features and Add-ons. The attractive growth in sales, margins
