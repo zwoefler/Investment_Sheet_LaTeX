@@ -15,14 +15,15 @@
 \RequirePackage{fontawesome}
 \RequirePackage{graphicx}
 \RequirePackage{siunitx}
+\RequirePackage{csquotes}
 \RequirePackage[gen]{eurosym}
 \usetikzlibrary{shapes.geometric}
 
 \graphicspath{ {./img/} }
 
 
-\newcommand{\swotWidth}{17}
-\newcommand{\swotHeight}{10}
+\newcommand{\swotWidth}{\textwidth}
+\newcommand{\swotHeight}{8}
 \DIVIDE{\swotWidth}{2}{\tileWidth}
 \DIVIDE{\swotHeight}{2}{\tileHeight}
 \DIVIDE{\tileWidth}{2}{\xTile}
@@ -40,54 +41,55 @@
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-% Company Logo
+% Company sheet Title
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{minipage}{\textwidth}
+\begin{minipage}{\textwidth cm}
     % %%%%%%%%%%%%%%%%%%%%%%%%%%
     % Title
     % %%%%%%%%%%%%%%%%%%%%%%%%%%
-    \center{\textbf{My beloved Company}}
-    \includegraphics[width=3em]{company_logo.png}
+    \center\includegraphics[width=2em]{company_logo.png}
+    {\textbf{Mensch und Maschine}}
 \end{minipage}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-% Company Story
+% Company Story and Information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{minipage}{0,75\textwidth}
-    Some cool text about the company that is so awesome to invest in.
-    In case there is more to grasp of that company I will list
-    some arguments here to state my investment thesis, what needs
-    to happen, when would I sell, what is the direction I want the
-    company to take?
-    Did the company do well in the last years? Well, why do I believe
-    that this trend is continuiing. The CEO, Founder, Shareholders,
-    technology? I don't know, but this is why I have this sheet.
+\begin{minipage}[t]{0,75\textwidth}
+    The german company \enquote{Mensch und Maschine} resells CAD/E/M
+    products by the american company \enquote{AutoDesk} and develops
+    own features and Add-ons. The attractive growth in sales, margins
+    and dividend needs o continues to be a very good investment. The
+    two-pillar business model of a high margin software development and
+    lower-margin VAR/project business adds up pretty nicely. Over the
+    coming years, M+M must increase it's margins and find ways to reduce
+    costs, especially in the VAR-Segment! But the strong balance sheet,
+    over 30 years of experience and low exposure to institutional investors
+    makes it a great Peter Lynch story
 \end{minipage}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%
-% Basic Information
-% %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{minipage}[r]{0,25\textwidth}
-    \begin{itemize}
-        \item [\faAsterisk] 1992
-        \item [\faMale] Joe Dow
-        \item [\faEuro] \num{1345} bn
-        \item [\faUsers] \num{172639}
-        \item [\faIndustry] Gaming and other digital
-        \item [\faBook] \faEuro $1,36 bn$
-        \item [\reflectbox{\rotatebox[origin=c]{270}{\faLevelDown}}] \faEuro $(1,99) bn$
+\begin{minipage}[t]{0,25\textwidth}
+    \begin{itemize}\scriptsize
+        \item [\faAsterisk] 1984
+        \item [\faMale] Adi Drotleff
+        \item [\faEuro] \faEuro \num{24.594} m
+        \item [\faUsers] \num{946}
+        \item [\faIndustry] CAD-Software
+        \item [\faBook] \faEuro \num{73,515} m
+        \item [\reflectbox{\rotatebox[origin=c]{270}{\faLevelDown}}] \faEuro
         \item [\faFolderOpen]Fast grower
         \item [\faQuestion]
         \begin{enumerate}
             \item Fast grower
-            \item Gaming
-            \item Some other important reason
+            \item Long time dividend payer
+            \item Growing Dividend 20\%
         \end{enumerate}
 
     \end{itemize}
 \end{minipage}
 
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,40 +106,39 @@
 
 
 
-
+% Strengths %
 \node [square, fill=DarkSeaGreen!75!yellow, text width=\tileWidth cm] at (-\xTile,\yTile) {
     \begin{varwidth}{\linewidth}
         \begin{itemize}[leftmargin=*,noitemsep]
-            \item Technical and business \printinunitsof{cm}{\the\textwidth}
-            \item Stable management team
-            \item Economies of scale
-            \item Financial stability
-            \item Acquisition capabilities
-
+            \item Lead by founder Adi Drotleff
+            \item Grew profitable with new issuance of shares - Buyback of \num{80592} shares @\euro\num{33,22}
+            \item No customer accouts for more than 2\% of revenue
+            \item Management owns  over 50\% of the company
+            \item Strong balance sheet, ~\euro\num{15}m in debt, \euro\num{32}m CashFlow (9M 2020)
         \end{itemize}
     \end{varwidth}
 };
 
+% Weaknesses
 \node [square, fill=red!25, text width=\tileWidth cm] at (\xTile, \yTile) {
     \begin{varwidth}{\linewidth}
         \begin{itemize}[leftmargin=*,noitemsep]
-            \item Marketing capabilities
-            \item Accounts cross-selling
-            \item Win on price image
-            \item BPO market
-            \item No differentiation
+            \item Increased outstanding shares: 2014: \num{15439}m to 2019: \num{16820}m shares
+            \item Heavily relying on AutoDesk price policy
+            \item VAR business expansion into other countries requires new offices $\rightarrow$ costs
+            \item Strong Focus in \enquote{D/A/CH} region, maybe too much
+            \item Personel risks, specific knowledge is required
         \end{itemize}
     \end{varwidth}
 };
 
+% Opportunities
 \node [square, fill=DarkSeaGreen!75, text width=\tileWidth cm] at (-\xTile,-\yTile) {
     \begin{varwidth}{\linewidth}
         \begin{itemize}[leftmargin=*,noitemsep]
-            \item Marketing push
-            \item Adding BPO capabilities
-            \item Pricing structure
-            \item Business process approach
-            \item Annuity engagement
+            \item Germany requires BIM-enabled 3D models for public building projects
+            \item High-margin internally developed software
+            \item Economics of scale in VAR buisiness $\rightarrow$ Higher margins lead to lower costs
         \end{itemize}
     \end{varwidth}
 };
@@ -145,10 +146,10 @@
 \node [square, fill=Salmon!75, text width=\tileWidth cm] at (\xTile,-\yTile) {
     \begin{varwidth}{\linewidth}
         \begin{itemize}[leftmargin=*,noitemsep]
-            \item High-risk deals
-            \item Image change inability
-            \item Degree of automation
-            \item Profitability losses
+            \item Autodesk main supplier in VAR Segment
+            \item Heavily reliant on VAR business (roughly \num{70}\%)
+            \item High cost, overhead for VAR business $\rightarrow$ low margins
+            \item Takes further capital increases into consideration (For what?!)
         \end{itemize}
     \end{varwidth}
 };
