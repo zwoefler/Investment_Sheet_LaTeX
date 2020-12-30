@@ -8,6 +8,7 @@
 \RequirePackage{enumitem,varwidth}
 \RequirePackage[svgnames]{xcolor}
 \RequirePackage{tikz}
+\RequirePackage{pgf-pie}
 \RequirePackage{lmodern}
 \RequirePackage{environ}
 \RequirePackage{wrapfig}
@@ -51,8 +52,7 @@
     {\textbf{Mensch und Maschine}}
 \end{minipage}
 
-\the\textwidth\\
-\printinunitsof{}\prntlen{\textwidth}\\
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Company Story and Information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,9 +91,18 @@
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+% Additional information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{\textwidth}
+    \begin{tikzpicture} % Tikz environment
 
+        \pie
+         {46/Rice,
+             32/Wheat, 22/Other} % it is essential to recheck that the sum of all the components mentioned should be 100%. Otherwise, Latex will leave the left percentage, blank.
+
+        \end{tikzpicture}
+
+\end{minipage}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % SWOT
