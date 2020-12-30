@@ -94,14 +94,10 @@
 % Additional information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{minipage}[t]{\textwidth}
-    \begin{tikzpicture} % Tikz environment
-
-        \pie
-         {46/Rice,
-             32/Wheat, 22/Other} % it is essential to recheck that the sum of all the components mentioned should be 100%. Otherwise, Latex will leave the left percentage, blank.
-
+        \begin{tikzpicture} % Tikz environment
+            \pie[rotate=270, radius=2]
+            {46/Germany, 21/Austria and Switzerland, 25/Europe, 8/Asia and America}
         \end{tikzpicture}
-
 \end{minipage}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
