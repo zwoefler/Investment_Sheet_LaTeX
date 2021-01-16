@@ -33,7 +33,7 @@
  right=10mm,
  bottom=10mm
 }
-\pagestyle{empty}
+\pagestyle{headings}
 \setlist{itemsep=-0.2em} % or \setlist{noitemsep} to leave space around whole list
 \graphicspath{ {./img/} }
 
@@ -86,7 +86,7 @@
     makes it a great Peter Lynch story.
 \end{minipage}\hfill
 \begin{minipage}[t]{0,25\linewidth}
-    \begin{itemize}[wide, labelsep = 1em, align=center]\scriptsize
+    \begin{itemize}[align=left, leftmargin=0pt, listparindent=\parindent, labelwidth=1cm, itemindent=!]\scriptsize
         \item [\faAsterisk] 1984
         \item [\faMale] Adi Drotleff
         \item [\faEuro] \faEuro \num{24.594} m
@@ -96,7 +96,7 @@
         \item [\reflectbox{\rotatebox[origin=c]{270}{\faLevelDown}}] \faEuro
         \item [\faFolderOpen]Fast grower
         \item [\faQuestion]
-        \begin{enumerate}
+        \begin{enumerate}[align=left, leftmargin=2cm]
             \item Fast grower
             \item Long time dividend payer
             \item Growing Dividend 20\%
@@ -108,6 +108,7 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Additional information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
+
     \begin{minipage}{.6\linewidth}
         \faArchive\space\textbf{Products:}
         \begin{enumerate}
@@ -124,10 +125,15 @@
             \end{tikzpicture}
         \captionof*{figure}{Revenue 2019}
     \end{minipage}
+
     \begin{minipage}{.4\linewidth}
         \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
             \pie[sum=auto, rotate=90, radius=2]
-            {{1/3}/Eins, {2/3}/Zwei}
+            {
+                {1/3}/Architecture
+                ,
+                {2/3}/Zwei
+            }
         \end{tikzpicture}
     \end{minipage}
 
@@ -203,5 +209,14 @@
 \draw(0.3,-0.3) node {\large\textbf{T}};
 
 \end{tikzpicture}
+\newpage
+\begin{minipage}{\textwidth}
+    % %%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Title
+    % %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \center\includegraphics[width=2em]{company_logo.png}
+    {\textbf{Mensch und Maschine}}
+\end{minipage}\\
+
 
 \end{document}
