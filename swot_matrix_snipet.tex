@@ -4,7 +4,7 @@
 \RequirePackage{layouts}
 \RequirePackage{printlen}
 \RequirePackage{calculator}
-\RequirePackage[margin=2cm]{geometry}
+\RequirePackage{geometry}
 \RequirePackage{enumitem,varwidth}
 \RequirePackage[svgnames]{xcolor}
 \RequirePackage{tikz}
@@ -21,6 +21,13 @@
 \RequirePackage{caption}
 \usetikzlibrary{shapes.geometric}
 
+\geometry{
+ a4paper,
+ left=15mm,
+ top=10mm,
+ right=10mm,
+ bottom=10mm
+}
 \graphicspath{ {./img/} }
 
 
@@ -45,60 +52,56 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Company sheet Title
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-\fbox{
-    \begin{minipage}{\textwidth}
-        % %%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Title
-        % %%%%%%%%%%%%%%%%%%%%%%%%%%
-        \center\includegraphics[width=2em]{company_logo.png}
-        {\textbf{Mensch und Maschine}}
-    \end{minipage}
+\begin{minipage}{\textwidth}
+    % %%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Title
+    % %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \center\includegraphics[width=2em]{company_logo.png}
+    {\textbf{Mensch und Maschine}}
+\end{minipage}
 
-}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Company Story and Information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-\fbox{
-    \begin{minipage}[t]{0,75\linewidth}
-        The german company \enquote{Mensch und Maschine} resells CAD/E/M
-        products by the american company \enquote{AutoDesk} and develops
-        own features and Add-ons. The attractive growth in sales, margins
-        and dividend needs o continues to be a very good investment. The
-        two-pillar business model of a high margin software development and
-        lower-margin VAR/project business adds up pretty nicely. Over the
-        coming years, M+M must increase it's margins and find ways to reduce
-        costs, especially in the VAR-Segment! But the strong balance sheet,
-        over 30 years of experience and low exposure to institutional investors
-        makes it a great Peter Lynch story.
-    \end{minipage}
-    \begin{minipage}[t]{0,25\linewidth}
-        \begin{itemize}\scriptsize
-            \item [\faAsterisk] 1984
-            \item [\faMale] Adi Drotleff
-            \item [\faEuro] \faEuro \num{24.594} m
-            \item [\faUsers] \num{946}
-            \item [\faIndustry] CAD-Software
-            \item [\faBook] \faEuro \num{73,515} m
-            \item [\reflectbox{\rotatebox[origin=c]{270}{\faLevelDown}}] \faEuro
-            \item [\faFolderOpen]Fast grower
-            \item [\faQuestion]
-            \begin{enumerate}
-                \item Fast grower
-                \item Long time dividend payer
-                \item Growing Dividend 20\%
-            \end{enumerate}
 
-        \end{itemize}
-    \end{minipage}
-}
+\begin{minipage}[t]{0,75\linewidth}
+    The german company \enquote{Mensch und Maschine} resells CAD/E/M
+    products by the american company \enquote{AutoDesk} and develops
+    own features and Add-ons. The attractive growth in sales, margins
+    and dividend needs o continues to be a very good investment. The
+    two-pillar business model of a high margin software development and
+    lower-margin VAR/project business adds up pretty nicely. Over the
+    coming years, M+M must increase it's margins and find ways to reduce
+    costs, especially in the VAR-Segment! But the strong balance sheet,
+    over 30 years of experience and low exposure to institutional investors
+    makes it a great Peter Lynch story.
+\end{minipage}
+\begin{minipage}[t]{0,25\linewidth}
+    \begin{itemize}\scriptsize
+        \item [\faAsterisk] 1984
+        \item [\faMale] Adi Drotleff
+        \item [\faEuro] \faEuro \num{24.594} m
+        \item [\faUsers] \num{946}
+        \item [\faIndustry] CAD-Software
+        \item [\faBook] \faEuro \num{73,515} m
+        \item [\reflectbox{\rotatebox[origin=c]{270}{\faLevelDown}}] \faEuro
+        \item [\faFolderOpen]Fast grower
+        \item [\faQuestion]
+        \begin{enumerate}
+            \item Fast grower
+            \item Long time dividend payer
+            \item Growing Dividend 20\%
+        \end{enumerate}
+
+    \end{itemize}
+\end{minipage}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Additional information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{minipage}{\linewidth}
     \begin{minipage}{.6\linewidth}
         \faArchive\space\textbf{Products:}
         \begin{enumerate}
@@ -117,11 +120,10 @@
     \end{minipage}
     \begin{minipage}{.4\linewidth}
         \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
-            \pie[rotate=90, radius=2]
+            \pie[sum=auto, rotate=90, radius=2]
             {{1/3}/Eins, {2/3}/Zwei}
         \end{tikzpicture}
     \end{minipage}
-\end{minipage}
 
 
 

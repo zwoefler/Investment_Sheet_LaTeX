@@ -37,3 +37,15 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 - About the company section in the top-right corner (Founding-year, CEO, Revenue, employees, industry, book-value, tangible book-value, category, reasons why intersting)
 - SWOT Analysis
 -
+
+
+# ToDos
+[ ] Add a little bit more space between Header and the text below
+[ ] Reduce the space between enumerate rows
+[ ] Reduce the space between itemize rows
+[ ] In the General-Information section aligne all the symbols on one line vertically
+[ ] Add a seconds page
+[ ] Move the "products" section beneath the Company story section
+[ ] Reduce the indentation of the enumerate in the "reasons ?" section in the General-Information section
+[X] Reduce the borders of the page to (t,r,b,l) 1cm, 1cm, 1cm, 1.5cm
+[ ] Remove the page number
