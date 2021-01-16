@@ -41,8 +41,8 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 
 # ToDos
 [ ] Add a little bit more space between Header and the text below
-[ ] Reduce the space between enumerate rows
-[ ] Reduce the space between itemize rows
+[X] Reduce the space between enumerate rows
+[X] Reduce the space between itemize rows
 [ ] In the General-Information section aligne all the symbols on one line vertically
 [ ] Add a seconds page
 [ ] Move the "products" section beneath the Company story section
