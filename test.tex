@@ -1,0 +1,29 @@
+\documentclass[11pt]{scrartcl}
+
+\RequirePackage{enumitem,varwidth}
+\RequirePackage{fontawesome}
+\RequirePackage{siunitx}
+
+\usepackage{mathtools}
+\SetLabelAlign{center}{\clap{#1}}
+
+\setlist{itemsep=-0.2em}
+
+\begin{document}
+
+\begin{minipage}{0,3\linewidth}
+    \begin{itemize}[wide, labelsep = 1em, align=center]\scriptsize
+        \item [\faAsterisk] 1984
+        \item [\faMale] Adi Drotleff
+        \item [\faEuro] \faEuro \num{24.594} m
+        \item [\faIndustry] CAD-Software
+        \item [\faQuestion]
+        \begin{enumerate}[wide=\parindent]
+            \item Fast grower
+            \item Long time dividend payer
+            \item Growing Dividend 20\%
+        \end{enumerate}
+    \end{itemize}
+\end{minipage}
+
+\end{document}
