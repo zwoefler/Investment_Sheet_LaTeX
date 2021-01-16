@@ -21,6 +21,9 @@
 \RequirePackage{caption}
 \usetikzlibrary{shapes.geometric}
 
+\usepackage{mathtools}
+\SetLabelAlign{center}{\clap{#1}}
+
 \geometry{
  a4paper,
  left=15mm,
@@ -60,7 +63,7 @@
     % %%%%%%%%%%%%%%%%%%%%%%%%%%
     \center\includegraphics[width=2em]{company_logo.png}
     {\textbf{Mensch und Maschine}}
-\end{minipage}
+\end{minipage}\\
 
 
 
@@ -68,7 +71,7 @@
 % Company Story and Information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0,75\linewidth}
+\begin{minipage}[t]{0,73\linewidth}
     The german company \enquote{Mensch und Maschine} resells CAD/E/M
     products by the american company \enquote{AutoDesk} and develops
     own features and Add-ons. The attractive growth in sales, margins
@@ -79,9 +82,9 @@
     costs, especially in the VAR-Segment! But the strong balance sheet,
     over 30 years of experience and low exposure to institutional investors
     makes it a great Peter Lynch story.
-\end{minipage}
-\begin{minipage}[t]{0,25\linewidth}
-    \begin{itemize}\scriptsize
+\end{minipage}\hfill
+\begin{minipage}[t]{0,23\linewidth}
+    \begin{itemize}[wide, labelsep = 1em, align=center]\scriptsize
         \item [\faAsterisk] 1984
         \item [\faMale] Adi Drotleff
         \item [\faEuro] \faEuro \num{24.594} m
