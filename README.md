@@ -49,3 +49,4 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 [ ] Reduce the indentation of the enumerate in the "reasons ?" section in the General-Information section
 [X] Reduce the borders of the page to (t,r,b,l) 1cm, 1cm, 1cm, 1.5cm
 [X] Remove the page number
+[X] Remove the "Figure 1:" standar caption from a chart caption

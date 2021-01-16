@@ -21,6 +21,8 @@
 \RequirePackage{caption}
 \usetikzlibrary{shapes.geometric}
 
+\captionsetup[figure]{name={}}
+
 \usepackage{mathtools}
 \SetLabelAlign{center}{\clap{#1}}
 
@@ -99,7 +101,6 @@
             \item Long time dividend payer
             \item Growing Dividend 20\%
         \end{enumerate}
-
     \end{itemize}
 \end{minipage}
 
@@ -121,7 +122,7 @@
                 \pie[rotate=90, radius=2]
                 {46/Germany, 21/Austria and Switzerland, 25/Europe, 8/Asia and America}
             \end{tikzpicture}
-        \captionof{figure}{Revenue 2019}
+        \captionof*{figure}{Revenue 2019}
     \end{minipage}
     \begin{minipage}{.4\linewidth}
         \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
