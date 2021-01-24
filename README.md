@@ -39,7 +39,7 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 -
 
 
-# ToDos
+# ToDos LaTeX
 [X] Add a little bit more space between Header and the text below
 [X] Reduce the space between enumerate rows
 [X] Reduce the space between itemize rows
@@ -50,4 +50,15 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 [X] Reduce the borders of the page to (t,r,b,l) 1cm, 1cm, 1cm, 1.5cm
 [X] Remove the page number
 [X] Remove the "Figure 1:" standar caption from a chart caption
+
+### Class
+[X] Create class file
+[ ] Add required structure minimum
+[ ] Make reuasable tempaltes for piecharts, SWOT, Special-notes...
+[ ] Segment and use classes for the individual elements on the page (Header, Infosection, Piecharts, Story, S W O and T of the analysis, etc.)
+
+
+# ToDos Webdev
+[ ] Build application that can write LaTeX
 [ ]
+
