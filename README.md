@@ -44,9 +44,10 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 [X] Reduce the space between enumerate rows
 [X] Reduce the space between itemize rows
 [X] In the General-Information section aligne all the symbols on one line vertically
-[ ] Add a seconds page
+[X] Add a second page
 [ ] Move the "products" section beneath the Company story section
-[ ] Reduce the indentation of the enumerate in the "reasons ?" section in the General-Information section
+[X] Reduce the indentation of the enumerate in the "reasons ?" section in the General-Information section
 [X] Reduce the borders of the page to (t,r,b,l) 1cm, 1cm, 1cm, 1.5cm
 [X] Remove the page number
 [X] Remove the "Figure 1:" standar caption from a chart caption
+[ ]
