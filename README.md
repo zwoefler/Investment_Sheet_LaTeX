@@ -53,7 +53,7 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 
 ### Class
 [X] Create class file
-[ ] Add required structure minimum
+[X] Add required structure minimum
 [ ] Make reuasable tempaltes for piecharts, SWOT, Special-notes...
 [ ] Segment and use classes for the individual elements on the page (Header, Infosection, Piecharts, Story, S W O and T of the analysis, etc.)
 
