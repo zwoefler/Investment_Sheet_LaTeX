@@ -57,6 +57,9 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 [ ] Make reuasable tempaltes for piecharts, SWOT, Special-notes...
 [ ] Segment and use classes for the individual elements on the page (Header, Infosection, Piecharts, Story, S W O and T of the analysis, etc.)
 
+[ ] When ommiting a value, put three dashes (---)
+[ ] Parametrize the Questions enumerate section in the company infosection
+
 
 # ToDos Webdev
 [ ] Build application that can write LaTeX

@@ -57,3 +57,29 @@
     group-separator = {,},
     group-minimum-digits = 4
 }
+
+
+% +++ Company Info Section +++ %
+\newcommand{\story}[1]{
+    \begin{minipage}[t]{0,72\linewidth}
+        #1
+    \end{minipage}\hfill
+}
+
+% +++ Company Story Section +++ %
+\newcommand{\infosection}[9]{
+    \begin{minipage}[t]{0,25\linewidth}
+        \begin{itemize}[align=center]\scriptsize
+            \item [\faAsterisk] #1
+            \item [\faMale] #2
+            \item [\faEuro] \faEuro \num{#3} m
+            \item [\faUsers] \num{#4}
+            \item [\faIndustry] #5
+            \item [\faBook] \faEuro \num{#6} m
+            \item [\reflectbox{\rotatebox[origin=c]{270}{\faLevelDown}}] \faEuro #7
+            \item [\faFolderOpen] #8
+            \item [\faQuestion] #9
+        \end{itemize}
+    \end{minipage}\\\\
+}
+
