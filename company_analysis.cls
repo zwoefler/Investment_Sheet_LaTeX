@@ -79,37 +79,29 @@
 
 
 % +++ SWOT Analysis +++ %
-
-\newcommand{\swotS}[1]{
+\newcommand{\swot}[4]{
     \node [square, fill=DarkSeaGreen!75!yellow, text width=\tileWidth cm] at (-\xTile,\yTile) {
-    \begin{varwidth}{\linewidth}
-        #1
-    \end{varwidth}
-};
-}
-
-\newcommand{\swotW}[1]{
-    \node [square, fill=red!25, text width=\tileWidth cm] at (\xTile, \yTile) {
         \begin{varwidth}{\linewidth}
             #1
         \end{varwidth}
     };
-}
 
-\newcommand{\swotO}[1]{
+    \node [square, fill=red!25, text width=\tileWidth cm] at (\xTile, \yTile) {
+        \begin{varwidth}{\linewidth}
+            #2
+        \end{varwidth}
+    };
+
     \node [square, fill=DarkSeaGreen!75, text width=\tileWidth cm] at (-\xTile,-\yTile) {
-    \begin{varwidth}{\linewidth}
-        #1
-    \end{varwidth}
-};
-}
+        \begin{varwidth}{\linewidth}
+            #3
+        \end{varwidth}
+    };
 
-
-\newcommand{\swotT}[1]{
     \node [square, fill=Salmon!75, text width=\tileWidth cm] at (\xTile,-\yTile) {
-    \begin{varwidth}{\linewidth}
-        #1
-    \end{varwidth}
-};
+        \begin{varwidth}{\linewidth}
+            #4
+        \end{varwidth}
+    };
 }
 
