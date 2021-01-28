@@ -80,56 +80,35 @@
 
 % +++ SWOT Analysis +++ %
 
-\newcommand{\swotS}[6]{
+\newcommand{\swotS}[1]{
     \node [square, fill=DarkSeaGreen!75!yellow, text width=\tileWidth cm] at (-\xTile,\yTile) {
     \begin{varwidth}{\linewidth}
-        \begin{itemize}[leftmargin=*,noitemsep]
-            \item #1
-            \item #2
-            \item #3
-            \item #4
-            \item #5
-        \end{itemize}
+        #1
     \end{varwidth}
 };
 }
 
-\newcommand{\swotW}[6]{
+\newcommand{\swotW}[1]{
     \node [square, fill=red!25, text width=\tileWidth cm] at (\xTile, \yTile) {
         \begin{varwidth}{\linewidth}
-            \begin{itemize}[leftmargin=*,noitemsep]
-                \item #1
-                \item #2
-                \item #3
-                \item #4
-                \item #5
-            \end{itemize}
+            #1
         \end{varwidth}
     };
 }
 
-\newcommand{\swotO}[3]{
+\newcommand{\swotO}[1]{
     \node [square, fill=DarkSeaGreen!75, text width=\tileWidth cm] at (-\xTile,-\yTile) {
     \begin{varwidth}{\linewidth}
-        \begin{itemize}[leftmargin=*,noitemsep]
-            \item #1
-            \item #2
-            \item #3
-        \end{itemize}
+        #1
     \end{varwidth}
 };
 }
 
 
-\newcommand{\swotT}[5]{
+\newcommand{\swotT}[1]{
     \node [square, fill=Salmon!75, text width=\tileWidth cm] at (\xTile,-\yTile) {
     \begin{varwidth}{\linewidth}
-        \begin{itemize}[leftmargin=*,noitemsep]
-            \item #1
-            \item #2
-            \item #3
-            \item #4
-        \end{itemize}
+        #1
     \end{varwidth}
 };
 }
