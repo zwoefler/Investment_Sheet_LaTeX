@@ -57,7 +57,7 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 - [ ] Tempalte for piecharts
 - [X] Template for SWOT
 - [ ] Tempalte for Special-note
-- [ ] Segment and use classes for the individual elements on the page (Header, Infosection, Piecharts, Story, S W O and T of the analysis, etc.)
+- [X] Segment and use classes for the individual elements on the page (Header, Infosection, Piecharts, Story, S W O and T of the analysis, etc.)
 
 - [ ] When ommiting a value, put three dashes (---)
 - [ ] Parametrize the Questions enumerate section in the company infosection
