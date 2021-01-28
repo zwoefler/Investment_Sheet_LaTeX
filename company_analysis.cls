@@ -1,7 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{company_analysis}[2021/01/25 Company Analysis class]
 
-
 \newcommand{\headlinecolor}{\normalcolor}
 \LoadClass{scrartcl}
 
@@ -9,7 +8,7 @@
 \RequirePackage{layouts}
 \RequirePackage{printlen}
 \RequirePackage{calculator}
-\RequirePackage{geometry}
+\RequirePackage[a4paper, left=10mm, top=5mm, right=5mm, bottom=5mm]{geometry}
 \RequirePackage{enumitem,varwidth}
 \RequirePackage[svgnames]{xcolor}
 \RequirePackage{tikz}
@@ -34,13 +33,7 @@
 \usepackage{mathtools}
 \SetLabelAlign{center}{\clap{#1}}
 
-\geometry{
- a4paper,
- left=10mm,
- top=5mm,
- right=5mm,
- bottom=5mm
-}
+
 \pagestyle{headings}
 \setlist{itemsep=-0.2em} % or \setlist{noitemsep} to leave space around whole list
 \graphicspath{ {./img/} }
@@ -81,5 +74,63 @@
             \item [\faQuestion] #9
         \end{itemize}
     \end{minipage}\\\\
+}
+
+
+
+% +++ SWOT Analysis +++ %
+
+\newcommand{\swotS}[6]{
+    \node [square, fill=DarkSeaGreen!75!yellow, text width=\tileWidth cm] at (-\xTile,\yTile) {
+    \begin{varwidth}{\linewidth}
+        \begin{itemize}[leftmargin=*,noitemsep]
+            \item #1
+            \item #2
+            \item #3
+            \item #4
+            \item #5
+        \end{itemize}
+    \end{varwidth}
+};
+}
+
+\newcommand{\swotW}[6]{
+    \node [square, fill=red!25, text width=\tileWidth cm] at (\xTile, \yTile) {
+        \begin{varwidth}{\linewidth}
+            \begin{itemize}[leftmargin=*,noitemsep]
+                \item #1
+                \item #2
+                \item #3
+                \item #4
+                \item #5
+            \end{itemize}
+        \end{varwidth}
+    };
+}
+
+\newcommand{\swotO}[3]{
+    \node [square, fill=DarkSeaGreen!75, text width=\tileWidth cm] at (-\xTile,-\yTile) {
+    \begin{varwidth}{\linewidth}
+        \begin{itemize}[leftmargin=*,noitemsep]
+            \item #1
+            \item #2
+            \item #3
+        \end{itemize}
+    \end{varwidth}
+};
+}
+
+
+\newcommand{\swotT}[5]{
+    \node [square, fill=Salmon!75, text width=\tileWidth cm] at (\xTile,-\yTile) {
+    \begin{varwidth}{\linewidth}
+        \begin{itemize}[leftmargin=*,noitemsep]
+            \item #1
+            \item #2
+            \item #3
+            \item #4
+        \end{itemize}
+    \end{varwidth}
+};
 }
 
