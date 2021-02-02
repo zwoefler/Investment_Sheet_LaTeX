@@ -1,17 +1,16 @@
 # Investment sheet as LaTeX
-This project holds my LaTeX template for my investment thesis for companies
+LaTeX template for an investment thesis for companies
 
 
 # Goal
-Have a reusable LaTeX tempalte with key details, SWOT-analysis and general information of a company that i might intend buying
+Have a reusable LaTeX tempalte (class file) with key details, SWOT-analysis and general information of a company. The handwritten example can be seen below.
+All the sections need to be included in the LaTeX Tempalte.
 
-
-# Digitalisation of handwritten Note
 ![story_sheet](img/story_sheet.png)
 
 
 
-# Usage with VS Code
+## Usage with VS Code
 - Install the Extensions
 `Remote - Containers` by Microsoft
 `LaTeX Workshop` by James Yu
@@ -35,15 +34,21 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 
 
 
-
 # Elements
-- Copany Name + Company Logo
-- Paragraph at the top middle-left
-- About the company section in the top-right corner (Founding-year, CEO, Revenue, employees, industry, book-value, tangible book-value, category, reasons why intersting)
-- SWOT Analysis
-
+Simple reusable commands for LaTeX environment
+- Company Title
+- Story
+- Company Infosection
+- Additional Information containing, `Products` and `Piechart` template.
+- SWOT-Analysis
 
 # ToDos LaTeX
+- [ ] When ommiting a value, put three dashes (---)
+- [ ] Parametrize the Questions enumerate section in the company infosection
+- [ ] Template for Special-note (looks like 3M Post-it)
+- [ ]
+
+### Finished
 - [X] Add a little bit more space between Header and the text below
 - [X] Reduce the space between enumerate rows
 - [X] Reduce the space between itemize rows
@@ -54,17 +59,11 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 - [X] Reduce the borders of the page to (t,r,b,l) 1cm, 1cm, 1cm, 1.5cm
 - [X] Remove the page number
 - [X] Remove the "Figure 1:" standar caption from a chart caption
-
-### Class
 - [X] Create class file
 - [X] Add required structure minimum
 - [X] Tempalte for piecharts
 - [X] Template for SWOT
-- [ ] Tempalte for Special-note
 - [X] Segment and use classes for the individual elements on the page (Header, Infosection, Piecharts, Story, S W O and T of the analysis, etc.)
-
-- [ ] When ommiting a value, put three dashes (---)
-- [ ] Parametrize the Questions enumerate section in the company infosection
 
 
 # ToDos Webdev
