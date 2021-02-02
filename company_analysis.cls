@@ -116,17 +116,25 @@
     };
 }
 
-\newenvironment{piechart}[2]
+\newenvironment{piechart}[2][]
 {
     \begin{minipage}{.4\linewidth}
         \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
             \pie[sum=auto, rotate=90, radius=2]
                 {
-                    #1
+                    #2
                 }
         \end{tikzpicture}
-        \captionof*{figure}{#2}
+        \captionof*{figure}{#1}
 }
 {
     \end{minipage}
+}
+
+
+\newenvironment{citequote}[1][]{%
+  \begin{quotation}
+  \noindent\textbf{#1}:
+}{%
+  \end{quotation}
 }
