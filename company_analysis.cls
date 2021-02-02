@@ -116,18 +116,17 @@
     };
 }
 
-\newenvironment{piechart}[1]
+\newenvironment{piechart}[2]
 {
-    \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
-        \pie[sum=auto, rotate=90, radius=2]
-        {
-            #1
-        }
-
+    \begin{minipage}{.4\linewidth}
+        \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
+            \pie[sum=auto, rotate=90, radius=2]
+                {
+                    #1
+                }
+        \end{tikzpicture}
+        \captionof*{figure}{#2}
 }
 {
-    \end{tikzpicture}
+    \end{minipage}
 }
-
-
-
