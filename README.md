@@ -36,7 +36,6 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 - Paragraph at the top middle-left
 - About the company section in the top-right corner (Founding-year, CEO, Revenue, employees, industry, book-value, tangible book-value, category, reasons why intersting)
 - SWOT Analysis
--
 
 
 # ToDos LaTeX
@@ -45,7 +44,7 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 - [X] Reduce the space between itemize rows
 - [X] In the General-Information section aligne all the symbols on one line vertically
 - [X] Add a second page
-- [ ] Move the "products" section beneath the Company story section
+- [X] Move the "products" section beneath the Company story section
 - [X] Reduce the indentation of the enumerate in the "reasons ?" section in the General-Information section
 - [X] Reduce the borders of the page to (t,r,b,l) 1cm, 1cm, 1cm, 1.5cm
 - [X] Remove the page number
@@ -54,7 +53,7 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 ### Class
 - [X] Create class file
 - [X] Add required structure minimum
-- [ ] Tempalte for piecharts
+- [X] Tempalte for piecharts
 - [X] Template for SWOT
 - [ ] Tempalte for Special-note
 - [X] Segment and use classes for the individual elements on the page (Header, Infosection, Piecharts, Story, S W O and T of the analysis, etc.)
