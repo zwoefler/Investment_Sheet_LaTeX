@@ -51,15 +51,26 @@
     group-minimum-digits = 4
 }
 
+% +++ Company Title +++ %
+\newcommand{\companyname}[2]{
+    \begin{minipage}{\textwidth}
+        \center\includegraphics[width=2em]{#1}
+        {\textbf{#2}}
+    \end{minipage}\\
+}
 
-% +++ Company Info Section +++ %
+
+% +++ Company Story Section +++ %
 \newcommand{\story}[1]{
     \begin{minipage}[t]{0,72\linewidth}
         #1
     \end{minipage}\hfill
 }
 
-% +++ Company Story Section +++ %
+
+
+
+% +++ Company Info Section +++ %
 \newcommand{\infosection}[9]{
     \begin{minipage}[t]{0,25\linewidth}
         \begin{itemize}[align=center]\scriptsize
@@ -105,6 +116,18 @@
     };
 }
 
+\newenvironment{piechart}[1]
+{
+    \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
+        \pie[sum=auto, rotate=90, radius=2]
+        {
+            #1
+        }
+
+}
+{
+    \end{tikzpicture}
+}
 
 
 

@@ -2,17 +2,7 @@
 
 \begin{document}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%
-% Company sheet Title
-% %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{minipage}{\textwidth}
-    % %%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Title
-    % %%%%%%%%%%%%%%%%%%%%%%%%%%
-    \center\includegraphics[width=2em]{company_logo.png}
-    {\textbf{Mensch und Maschine}}
-\end{minipage}\\
-
+\companyname{company_logo.png}{Mensch und Maschine}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -45,33 +35,29 @@
 % Additional information
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \begin{minipage}{.6\linewidth}
-        \faArchive\space\textbf{Products:}
-        \begin{enumerate}
-            \item Claims to reduce production times
-            \item over 100 proucts in CAD/M/E
-        \end{enumerate}
-        $\Rightarrow$ Needed for building Bridges, Gardens, stadiums, manufacturing
-    \end{minipage}
-    \begin{minipage}{.4\linewidth}
-        \centering
-            \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}] % Tikz environment
-                \pie[rotate=90, radius=2]
-                {46/Germany, 21/Austria and Switzerland, 25/Europe, 8/Asia and America}
-            \end{tikzpicture}
-        \captionof*{figure}{Revenue 2019}
-    \end{minipage}
-
-    \begin{minipage}{.4\linewidth}
-        \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
-            \pie[sum=auto, rotate=90, radius=2]
-            {
-                {1/3}/Architecture
-                ,
-                {2/3}/Zwei
-            }
+\begin{minipage}{.6\linewidth}
+    \faArchive\space\textbf{Products:}
+    \begin{enumerate}
+        \item Claims to reduce production times
+        \item over 100 proucts in CAD/M/E
+    \end{enumerate}
+    $\Rightarrow$ Needed for building Bridges, Gardens, stadiums, manufacturing
+\end{minipage}
+\begin{minipage}{.4\linewidth}
+        \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}] % Tikz environment
+            \pie[rotate=90, radius=2]
+            {46/Germany, 21/Austria and Switzerland, 25/Europe, 8/Asia and America}
         \end{tikzpicture}
-    \end{minipage}
+    \captionof*{figure}{Revenue 2019}
+\end{minipage}
+
+\begin{minipage}{.4\linewidth}
+    \begin{piechart}{
+            {1/4}/Architecture,
+            {3/4}/Zwei
+    }
+    \end{piechart}
+\end{minipage}
 
 
 
@@ -86,61 +72,53 @@
         inner sep=-1mm, draw
     }, font=\scriptsize\sffamily, thick
 ]
-% \draw[help lines] (-16,-16) grid (16,16);
 \draw[black, fill=gray] (-\tileWidth,-\tileHeight) rectangle (\tileWidth,\tileHeight);
 
-\swot
-{ % +++ STRENGTHS +++ %
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Lead by founder Adi Drotleff
-    \item Grew profitable with new issuance of shares - Buyback of \num{80592} shares @\euro\num{33,22}
-    \item No customer accouts for more than 2\% of revenue
-    \item Management owns  over 50\% of the company
-    \item Strong balance sheet, ~\euro\num{15}m in debt, \euro\num{32}m CashFlow (9M 2020)
-\end{itemize}
-}
-{ % +++ WEAKNESSES +++ %
-\begin{itemize}[leftmargin=*, noitemsep]
-    \item Increased outstanding shares: 2014: \num{15439}m to 2019: \num{16820}m shares
-    \item Heavily relying on AutoDesk price policy
-    \item VAR business expansion into other countries requires new offices $\rightarrow$ costs
-    \item Strong Focus in \enquote{D/A/CH} region, maybe too much
-    \item Personel risks, specific knowledge is required
-\end{itemize}
-}
-{ % +++ OPPORTUNITIES +++ %
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Germany requires BIM-enabled 3D models for public building projects
-    \item High-margin internally developed software
-    \item Economics of scale in VAR buisiness $\rightarrow$ Higher margins lead to lower costs
-\end{itemize}
-}
-{ % +++ THREATS +++ %
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Autodesk main supplier in VAR Segment
-    \item Heavily reliant on VAR business (roughly \num{70}\%)
-    \item High cost, overhead for VAR business $\rightarrow$ low margins
-    \item Takes further capital increases into consideration (For what?!)
-\end{itemize}
-}
+    \swot
+    { % +++ STRENGTHS +++ %
+    \begin{itemize}[leftmargin=*,noitemsep]
+        \item Lead by founder Adi Drotleff
+        \item Grew profitable with new issuance of shares - Buyback of \num{80592} shares @\euro\num{33,22}
+        \item No customer accouts for more than 2\% of revenue
+        \item Management owns  over 50\% of the company
+        \item Strong balance sheet, ~\euro\num{15}m in debt, \euro\num{32}m CashFlow (9M 2020)
+    \end{itemize}
+    }
+    { % +++ WEAKNESSES +++ %
+    \begin{itemize}[leftmargin=*, noitemsep]
+        \item Increased outstanding shares: 2014: \num{15439}m to 2019: \num{16820}m shares
+        \item Heavily relying on AutoDesk price policy
+        \item VAR business expansion into other countries requires new offices $\rightarrow$ costs
+        \item Strong Focus in \enquote{D/A/CH} region, maybe too much
+        \item Personel risks, specific knowledge is required
+    \end{itemize}
+    }
+    { % +++ OPPORTUNITIES +++ %
+    \begin{itemize}[leftmargin=*,noitemsep]
+        \item Germany requires BIM-enabled 3D models for public building projects
+        \item High-margin internally developed software
+        \item Economics of scale in VAR buisiness $\rightarrow$ Higher margins lead to lower costs
+    \end{itemize}
+    }
+    { % +++ THREATS +++ %
+    \begin{itemize}[leftmargin=*,noitemsep]
+        \item Autodesk main supplier in VAR Segment
+        \item Heavily reliant on VAR business (roughly \num{70}\%)
+        \item High cost, overhead for VAR business $\rightarrow$ low margins
+        \item Takes further capital increases into consideration (For what?!)
+    \end{itemize}
+    }
 
-
-\draw(-0.3,0.3) node {\large\textbf{S}};
-\draw(0.3,0.3) node {\large\textbf{W}};
-\draw(-0.3,-0.3) node {\large\textbf{O}};
-\draw(0.3,-0.3) node {\large\textbf{T}};
+    \draw(-0.3,0.3) node {\large\textbf{S}};
+    \draw(0.3,0.3) node {\large\textbf{W}};
+    \draw(-0.3,-0.3) node {\large\textbf{O}};
+    \draw(0.3,-0.3) node {\large\textbf{T}};
 
 \end{tikzpicture}
 
-
 \newpage
-\begin{minipage}{\textwidth}
-    % %%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Title
-    % %%%%%%%%%%%%%%%%%%%%%%%%%%
-    \center\includegraphics[width=2em]{company_logo.png}
-    {\textbf{Mensch und Maschine}}
-\end{minipage}\\
+\companyname{company_logo.png}{Mensch und Maschine}
+
 
 
 \end{document}
