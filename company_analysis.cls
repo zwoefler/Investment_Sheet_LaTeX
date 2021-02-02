@@ -91,6 +91,14 @@
 
 % +++ SWOT Analysis +++ %
 \newcommand{\swot}[4]{
+    \begin{tikzpicture}[
+        square/.style={%
+            shape=rectangle, minimum width=\tileWidth cm, minimum height=\tileHeight cm,
+            inner sep=-1mm, draw
+        }, font=\scriptsize\sffamily, thick
+    ]
+    \draw[black, fill=gray] (-\tileWidth,-\tileHeight) rectangle (\tileWidth,\tileHeight);
+
     \node [square, fill=DarkSeaGreen!75!yellow, text width=\tileWidth cm] at (-\xTile,\yTile) {
         \begin{varwidth}{\linewidth}
             #1
@@ -114,7 +122,38 @@
             #4
         \end{varwidth}
     };
+
+
+    \draw(-0.3,0.3) node {\large\textbf{S}};
+    \draw(0.3,0.3) node {\large\textbf{W}};
+    \draw(-0.3,-0.3) node {\large\textbf{O}};
+    \draw(0.3,-0.3) node {\large\textbf{T}};
+
+    \end{tikzpicture}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \newcommand{\piechart}[2][]
 {
