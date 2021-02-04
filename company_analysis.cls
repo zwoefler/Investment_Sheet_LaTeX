@@ -93,9 +93,7 @@
 
 
 % +++ Reasons enumerate for company Info section +++ %
-\newenvironment{\reasons}[]
-{\begin{enumerate}[leftmargin=0.8em, labelsep=0.2em]}
-{\end{enumerate}}
+
 
 
 % +++ SWOT Analysis +++ %
