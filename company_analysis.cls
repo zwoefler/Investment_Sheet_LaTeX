@@ -23,11 +23,14 @@
 \RequirePackage{csquotes}
 \RequirePackage[gen]{eurosym}
 \RequirePackage{caption}
+\RequirePackage{xparse}
+\RequirePackage{fancypar}
 
 
-
+\usetikzlibrary{shadows}
 \usetikzlibrary{shapes.geometric}
 
+% Standard Figure caption is empty
 \captionsetup[figure]{name={}}
 
 \usepackage{mathtools}
@@ -35,7 +38,9 @@
 
 
 \pagestyle{headings}
-\setlist{itemsep=-0.2em} % or \setlist{noitemsep} to leave space around whole list
+\setlist{itemsep=-0.2em}
+
+% Standard image path
 \graphicspath{ {./img/} }
 
 
@@ -50,6 +55,7 @@
     group-separator = {,},
     group-minimum-digits = 4
 }
+
 
 % +++ Company Title +++ %
 \newcommand{\companyname}[2]{
@@ -68,12 +74,10 @@
 }
 
 
-
-
 % +++ Company Info Section +++ %
 \newcommand{\infosection}[9]{
     \begin{minipage}[t]{0,25\linewidth}
-        \begin{itemize}[align=center]\scriptsize
+        \begin{itemize}[align=center, labelsep=0em]\scriptsize
             \item [\faAsterisk] #1
             \item [\faMale] #2
             \item [\faEuro] \faEuro \num{#3} m
@@ -87,6 +91,11 @@
     \end{minipage}\\\\
 }
 
+
+% +++ Reasons enumerate for company Info section +++ %
+\newenvironment{\reasons}[]
+{\begin{enumerate}[leftmargin=0.8em, labelsep=0.2em]}
+{\end{enumerate}}
 
 
 % +++ SWOT Analysis +++ %
@@ -133,22 +142,58 @@
 }
 
 
+\definecolor{myyellow}{RGB}{242,226,149}
 
+\makeatletter
+\pgfdeclareshape{document}{
+\inheritsavedanchors[from=rectangle] % this is nearly a rectangle
+\inheritanchorborder[from=rectangle]
+\inheritanchor[from=rectangle]{center}
+\inheritanchor[from=rectangle]{north}
+\inheritanchor[from=rectangle]{south}
+\inheritanchor[from=rectangle]{west}
+\inheritanchor[from=rectangle]{east}
+% ... and possibly more
+\backgroundpath{% this is new
+% store lower right in xa/ya and upper right in xb/yb
+\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+% compute corner of ‘‘flipped page’’
+\pgf@xc=\pgf@xb \advance\pgf@xc by-27pt % this should be a parameter
+\pgf@yc=\pgf@yb \advance\pgf@yc by-17pt
+% construct main path
+\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+\pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+\pgfpathlineto{\pgfpoint{\pgf@xc}{\pgf@yb}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yc}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+\pgfpathclose
+% add little corner
+\pgfpathmoveto{\pgfpoint{\pgf@xc}{\pgf@yb}}
+\pgfpathlineto{\pgfpoint{\pgf@xc}{\pgf@yc}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yc}}
+\pgfpathlineto{\pgfpoint{\pgf@xc}{\pgf@yc}}
+}
+}
+\makeatother
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\NewDocumentCommand\StickyNote{O{6cm}mO{6cm}}{%
+\begin{tikzpicture}
+\node[
+document,
+draw,
+drop shadow={
+  shadow xshift=2pt,
+  shadow yshift=-3pt
+},
+inner xsep=70pt,
+fill=myyellow,
+xslant=-0.1,
+yslant=0.1,
+inner ysep=10pt
+] {\parbox[t][#1][c]{#3}{#2}};
+\end{tikzpicture}%
+}
 
 
 

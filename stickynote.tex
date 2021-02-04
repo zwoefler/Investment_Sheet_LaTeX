@@ -20,8 +20,8 @@
 \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
 \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
 % compute corner of ‘‘flipped page’’
-\pgf@xc=\pgf@xb \advance\pgf@xc by-16pt % this should be a parameter
-\pgf@yc=\pgf@yb \advance\pgf@yc by-10pt
+\pgf@xc=\pgf@xb \advance\pgf@xc by-27pt % this should be a parameter
+\pgf@yc=\pgf@yb \advance\pgf@yc by-17pt
 % construct main path
 \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
 \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb}}
@@ -45,9 +45,9 @@ document,
 draw,
 drop shadow={
   shadow xshift=2pt,
-  shadow yshift=-4pt
+  shadow yshift=-3pt
 },
-inner xsep=7pt,
+inner xsep=70pt,
 fill=myyellow,
 xslant=-0.1,
 yslant=0.1,
@@ -59,6 +59,6 @@ inner ysep=10pt
 
 \begin{document}
 
-\StickyNote[2.5cm]{\LARGE As \underline{who}, I want\\[4ex]\underline{what} so that \underline{why}}[6.5cm]
+\StickyNote[2cm]{\underline{why}}[2cm]
 
 \end{document}
