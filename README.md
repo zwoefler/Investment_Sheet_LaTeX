@@ -34,7 +34,7 @@ Now use the TEX_button on the left side to `View LaTeX PDF`
 
 
 
-# Elements
+# LaTeX Template
 Simple reusable commands for LaTeX environment
 - Company Title
 - Story
@@ -42,7 +42,7 @@ Simple reusable commands for LaTeX environment
 - Additional Information containing, `Products` and `Piechart` template.
 - SWOT-Analysis
 
-# ToDos LaTeX
+### ToDos
 - [ ] When ommiting a value, put three dashes (---)
 - [ ] Parametrize the Questions enumerate section in the company infosection
 - [ ] Template for Special-note (looks like 3M Post-it)
@@ -66,7 +66,15 @@ Simple reusable commands for LaTeX environment
 - [X] Segment and use classes for the individual elements on the page (Header, Infosection, Piecharts, Story, S W O and T of the analysis, etc.)
 
 
-# ToDos Webdev
+# Webapplication
+- [ ] Webinterface that loosly resembles the LaTeX template (HTML)
+  - [ ] Company Title
+  - [ ] Story
+  - [ ] Company Info Page
+  - [ ] SWOT-Analysis
+  - [ ] Additional Information
 - [ ] Build application that can write LaTeX
+- [ ] Include a piechart
+- [ ] Company-Infosection with Icons for bulletpoints
 - [ ]
 
