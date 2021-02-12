@@ -45,7 +45,7 @@ Simple reusable commands for LaTeX environment
 ### ToDos
 - [ ] When ommiting a value, put three dashes (---)
 - [ ] Parametrize the Questions enumerate section in the company infosection
-- [ ] Template for Special-note (looks like 3M Post-it)
+- [X] Template for Special-note (looks like 3M Post-it)
 - [ ]
 
 ### Finished

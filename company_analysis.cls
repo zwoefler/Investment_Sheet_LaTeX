@@ -140,7 +140,9 @@
 }
 
 
-\definecolor{myyellow}{RGB}{242,226,149}
+\definecolor{myyellow}{RGB}{253,242,28}
+\definecolor{myred}{RGB}{220,70,70}
+\definecolor{myorange}{RGB}{244, 180, 22}
 
 \makeatletter
 \pgfdeclareshape{document}{
@@ -175,7 +177,7 @@
 }
 \makeatother
 
-\NewDocumentCommand\StickyNote{O{6cm}mO{6cm}}{%
+\NewDocumentCommand\StickyNote{O{6cm}mO{6cm}O{myyellow}}{%
 \begin{tikzpicture}
 \node[
 document,
@@ -184,8 +186,8 @@ drop shadow={
   shadow xshift=2pt,
   shadow yshift=-3pt
 },
-inner xsep=70pt,
-fill=myyellow,
+inner xsep=7pt,
+fill=#4,
 xslant=-0.1,
 yslant=0.1,
 inner ysep=10pt
@@ -202,7 +204,21 @@ inner ysep=10pt
 {
     \begin{minipage}{.35\linewidth}
         \centering
-        \begin{tikzpicture}[scale=.75, every node/.style={scale=.75}]
+        \begin{tikzpicture}[scale=0.75, every node/.style={scale=0.75}]
+            \pie[sum=auto, rotate=90, radius=2]
+                {
+                    #2
+                }
+        \end{tikzpicture}
+        \captionof*{figure}{#1}
+    \end{minipage}
+}
+
+\newcommand{\smallpiechart}[2][]
+{
+    \begin{minipage}{.25\linewidth}
+        \centering
+        \begin{tikzpicture}[scale=0.3, every node/.style={scale=0.75}]
             \pie[sum=auto, rotate=90, radius=2]
                 {
                     #2
