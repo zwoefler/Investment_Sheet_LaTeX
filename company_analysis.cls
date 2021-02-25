@@ -25,6 +25,7 @@
 \RequirePackage{caption}
 \RequirePackage{xparse}
 \RequirePackage{fancypar}
+\RequirePackage{subfig}
 
 
 \usetikzlibrary{shadows}
